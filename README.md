@@ -6,5 +6,3 @@ This is a Chrome extension for automatically signing in student System, it is ju
 this extension need to communicate with server to process the login(Attention❗: the source of server application is not included in this project, because the complied environment is bad, if you are interested with it,  you can PR and i will share with u.)
 
 This project is applied in GDOU(广东海洋大学)‘s student system automatically login.
-
-1)
