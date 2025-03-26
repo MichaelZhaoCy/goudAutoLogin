@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>广东海洋大学教务自动登录</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      width: 320px;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    input {
+      width: 90%;
+      margin: 8px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .loading {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 3px solid white;
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 0.8s linear infinite;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    #status {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>GDOU 广东海洋大学教务自动登录</h2>
+  <input type="text" hidden id="url" value="https://jw.gdou.edu.cn/xtgl/login_slogin.html">
+
+  <label>账号:</label>
+  <input type="text" id="cookieName" placeholder="请输入您的学号">
+
+  <label>密码:</label>
+  <input type="password" id="cookieValue" placeholder="请输入您的密码">
+
+  <input type="text" id="expires" hidden value="3600">
+
+  <button id="setCookie">
+    登陆
+    <span id="loadingIcon" class="loading" style="display: none;"></span>
+  </button>
+
+  <p id="status"></p>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

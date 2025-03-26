@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "GDOU 教务自动登录",
+  "version": "1.0.0",
+  "description": "一个懒人自动登陆广东海洋大学教务系统的扩展",
+
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://jw.gdou.edu.cn/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
